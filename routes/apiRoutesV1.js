@@ -14,6 +14,8 @@ router.use("/questions", require("../lib/questions/routes"));
 
 router.use("/options", require("../lib/answers_options/routes"));
 
+router.use("/session", require("../lib/session-tests/routes"));
+
 // router.use("/students", require("../lib/students/routes"));
 
 // router.use("/tests", require("../lib/tests/routes"));
