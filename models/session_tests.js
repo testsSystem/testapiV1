@@ -31,5 +31,6 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Session_tests",
     }
   );
+
   return Session_tests;
 };
