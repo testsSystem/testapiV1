@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
   }
+
   Answers_options.init(
     {
       answer: DataTypes.STRING,
