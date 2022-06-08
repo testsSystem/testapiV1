@@ -14,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
       Tests.belongsTo(models.Users, {
         foreignKey: "user_id",
       });
+      Tests.hasMany(models.Session_tests, {
+        foreignKey: "test_id",
+      });
     }
   }
   Tests.init(
