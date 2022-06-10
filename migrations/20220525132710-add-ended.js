@@ -3,7 +3,7 @@ module.exports = {
     // logic for transforming into the new state
     return queryInterface.addColumn(
       "Session_tests",
-      "edned_at",
+      "ended_at",
       Sequelize.DATE
     );
   },
