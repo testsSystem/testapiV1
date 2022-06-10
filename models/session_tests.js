@@ -25,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
       result: DataTypes.INTEGER,
       started_at: DataTypes.DATE,
       ended_at: DataTypes.DATE,
+      status: DataTypes.BOOLEAN,
     },
     {
       sequelize,
