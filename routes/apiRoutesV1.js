@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-router.use("/users", require("../lib/admins/routes"));
+router.use("/admin", require("../lib/admins/routes"));
+
+router.use("/users", require("../lib/users/routes"));
 
 router.use("/instructors", require("../lib/instructors/routes"));
 
