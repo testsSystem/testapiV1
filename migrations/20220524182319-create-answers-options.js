@@ -10,12 +10,15 @@ module.exports = {
       },
       answer: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       question_id: {
         type: Sequelize.INTEGER,
+        allowNull: false,
       },
       correct_answer: {
         type: Sequelize.BOOLEAN,
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,

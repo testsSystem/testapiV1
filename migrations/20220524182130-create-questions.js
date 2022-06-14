@@ -10,9 +10,11 @@ module.exports = {
       },
       questoin: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       test_id: {
         type: Sequelize.INTEGER,
+        allowNull: false,
       },
       order: {
         type: Sequelize.INTEGER,

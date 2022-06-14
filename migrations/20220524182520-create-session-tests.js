@@ -1,36 +1,49 @@
-'use strict';
+"use strict";
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Session_tests', {
+    await queryInterface.createTable("Session_tests", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       user_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
       },
       test_key: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       test_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
       },
       result: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+      },
+      status: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: 1,
+      },
+      started_at: {
+        type: Sequelize.DATE,
+      },
+      ended_at: {
+        type: Sequelize.DATE,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Session_tests');
-  }
+    await queryInterface.dropTable("Session_tests");
+  },
 };

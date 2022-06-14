@@ -10,6 +10,7 @@ module.exports = {
       },
       first_name: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       last_name: {
         type: Sequelize.STRING,
@@ -21,6 +22,7 @@ module.exports = {
       },
       password: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       role: {
         type: Sequelize.ENUM("admin", "student", "instructor"),
@@ -32,6 +34,10 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
+      },
+      status: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: 1,
       },
     });
   },
