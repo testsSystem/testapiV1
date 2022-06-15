@@ -11,6 +11,12 @@ module.exports = {
       user_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+          model: {
+            tableName: "Users",
+          },
+          key: "id",
+        },
       },
       test_key: {
         type: Sequelize.STRING,
@@ -18,6 +24,12 @@ module.exports = {
       test_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+          model: {
+            tableName: "Tests",
+          },
+          key: "id",
+        },
       },
       result: {
         type: Sequelize.INTEGER,

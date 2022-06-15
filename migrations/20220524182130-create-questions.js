@@ -15,6 +15,12 @@ module.exports = {
       test_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+          model: {
+            tableName: "Tests",
+          },
+          key: "id",
+        },
       },
       order: {
         type: Sequelize.INTEGER,

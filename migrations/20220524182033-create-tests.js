@@ -24,6 +24,17 @@ module.exports = {
       user_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+          model: {
+            tableName: "Users",
+          },
+          key: "id",
+        },
+      },
+      status: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
+        defaultValue: 1,
       },
       createdAt: {
         allowNull: false,

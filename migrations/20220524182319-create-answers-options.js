@@ -15,6 +15,12 @@ module.exports = {
       question_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+          model: {
+            tableName: "Questions",
+          },
+          key: "id",
+        },
       },
       correct_answer: {
         type: Sequelize.BOOLEAN,
