@@ -1,6 +1,6 @@
 # testapiV1
 
-[Todo API v1 documentation](https://documenter.getpostman.com/view/20348645/UzBjs7ua)
+[Postman Documentation V1](https://documenter.getpostman.com/view/20348645/UzBjs7ua)
 
 # tech stack used
 
